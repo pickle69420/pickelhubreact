@@ -10,7 +10,7 @@ if ("serviceWorker" in navigator) {
       Promise.allSettled(
         registrations.map((registration) => registration.unregister())
       ).then(() => {
-        localStorage.setItem("version", version);
+        localStorage.setItem("version", mainv);
         location.reload();
       });
     });
