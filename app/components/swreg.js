@@ -3,7 +3,7 @@ import { useEffect } from "react"
 
 export default function RegisterSW() {
     useEffect(async ()=>{
-        await import("~/scripts/registerSw");
+        await import("../scripts/registerSW");
     });
     return (
         <></>
