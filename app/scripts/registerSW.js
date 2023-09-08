@@ -21,6 +21,6 @@ if ("serviceWorker" in navigator) {
 
 function registerSw() {
   navigator.serviceWorker.register("/sw.js", {
-    scope: __uv$config.prefix
+    scope: "/~uv/"
   });
 }
