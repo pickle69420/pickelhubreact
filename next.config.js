@@ -1,6 +1,41 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    swcMinify: true,
-}
+//const http = require('http');
+//const { createBareServer } = require('@tomphttp/bare-server-node');
 
-module.exports = nextConfig
+module.exports = async (phase, { defaultConfig }) => {
+    const nextConfig = {
+
+    }
+    /*if(process.env.NODE_ENV == 'production') {
+        const httpServer = http.createServer();
+
+        const bareServer = createBareServer('/bare/');
+
+        httpServer.on('request', (req, res) => {
+            if (bareServer.shouldRoute(req)) {
+                bareServer.routeRequest(req, res);
+            } else {
+                res.writeHead(400);
+                res.end('Not found.');
+            }
+        });
+
+        httpServer.on('upgrade', (req, socket, head) => {
+            if (bareServer.shouldRoute(req)) {
+                bareServer.routeUpgrade(req, socket, head);
+            } else {
+                socket.end();
+            }
+        });
+
+        httpServer.on('listening', () => {
+            console.log('BARE server listening');
+        });
+
+        httpServer.listen({
+            port: 8080,
+        });
+    }*/
+
+    return nextConfig
+}
