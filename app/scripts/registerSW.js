@@ -1,16 +1,16 @@
-import { mainv } from "../data/version.json";
+import version from "../data/version.json";
 
 console.log('GELD');
 
 if ("serviceWorker" in navigator) {
   const lastVersion = localStorage.getItem("version");
 
-  if (lastVersion !== mainv) {
+  if (lastVersion !== version.mainv) {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
       Promise.allSettled(
         registrations.map((registration) => registration.unregister())
       ).then(() => {
-        localStorage.setItem("version", mainv);
+        localStorage.setItem("version", version.mainv);
         location.reload();
       });
     });
