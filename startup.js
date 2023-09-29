@@ -28,7 +28,7 @@ httpServer.on('upgrade', (req, socket, head) => {
 });
 
 httpServer.on('listening', () => {
-    console.log('PIKLHUB <Ready> on port 3000');
+    console.log(' > PIKL ready on port 3000');
 });
 
 httpServer.listen({

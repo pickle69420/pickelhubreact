@@ -2,8 +2,11 @@
 import { useEffect } from "react"
 
 export default function RegisterSW() {
-    useEffect(async ()=>{
-        await import("../scripts/registerSW");
+    const register = async () => {
+        await import("@/scripts/registerSW");
+    };
+    useEffect(()=>{
+        register();
     });
     return (
         <></>

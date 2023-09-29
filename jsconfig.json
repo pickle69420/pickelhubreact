@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "esModuleInterop": true,
+      "plugins": [
+        {
+          "name": "next"
+        }
+      ],
+      "paths": {
+        "@/*": ["./*"]
+      },
+      "jsx": "react"
+    }
+  }
+  

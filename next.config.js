@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {}
 
-module.exports = async (phase, { defaultConfig }) => {
-    const nextConfig = {
-
-    }
-    return nextConfig
-}
+module.exports = nextConfig

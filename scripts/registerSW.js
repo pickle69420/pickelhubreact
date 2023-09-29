@@ -1,6 +1,4 @@
-import version from "../data/version.json";
-
-console.log('GELD');
+import version from "@/data/version.json";
 
 if ("serviceWorker" in navigator) {
   const lastVersion = localStorage.getItem("version");

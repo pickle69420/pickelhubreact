@@ -1,5 +1,5 @@
 'use client'
-import { xor } from "../scripts/codec";
+import { proxifyUrl } from "../scripts/proxyurl";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 
@@ -8,7 +8,7 @@ export default function SearchBar() {
     var submit = useRef(null);
     function handleSubmit(e) {
         if (e.code == "Enter") {
-            router.push("/~uv/"+xor.encode(submit.current.value));
+            router.push("/~uv/"+proxifyUrl(submit.current.value));
         }
     }
     return (

@@ -1,11 +1,9 @@
-import RegisterSW from './components/swreg'
-import SearchBar from './components/searchbar'
+import * as React from "react";
 
-export default function MainUI() {
-  return (
-    <main>
-      <RegisterSW></RegisterSW>
-      <SearchBar></SearchBar>
-    </main>
-  )
+export default function Home() {
+	return (
+		<div>
+			<p>hi</p>
+		</div>
+	);
 }
