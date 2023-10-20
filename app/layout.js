@@ -1,27 +1,8 @@
-import "../styles/globals.css";
-import * as React from "react";
-import { siteConfig } from "@/config/site";
+import "@/styles/globals.css";
 import { fontSans } from "@/config/fonts";
 import RegisterSW from "@/components/swreg";
-import { Providers } from "./providers.js";
 import clsx from "clsx";
-
-export const metadata = {
-	title: {
-		default: siteConfig.name,
-		template: `%s - ${siteConfig.name}`,
-	},
-	description: siteConfig.description,
-	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "white" },
-		{ media: "(prefers-color-scheme: dark)", color: "black" },
-	],
-	icons: {
-		icon: "/favicon.ico",
-		shortcut: "/favicon-16x16.png",
-		apple: "/apple-touch-icon.png",
-	},
-};
+import Provider from "@/components/themes";
 
 export default function RootLayout({children}) {
 	return (
@@ -33,12 +14,10 @@ export default function RootLayout({children}) {
 					fontSans.variable
 				)}
 			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+				<Provider>
 					<RegisterSW></RegisterSW>
-					<main>
-						{children}
-					</main>
-				</Providers>
+					{children}
+				</Provider>
 			</body>
 		</html>
 	);

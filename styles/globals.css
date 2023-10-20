@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .glow-lg {
+        @apply border-green-600;
+        box-shadow: 0 0 18.75px #16a34a, inset 0 0 11.25px #16a34a;
+    }
+    
+    .glow-md {
+        @apply border-green-600;
+        box-shadow: 0 0 12.5px #16a34a, inset 0 0 7.5px #16a34a;
+    }
+    
+    .glow-sm {
+        @apply border-green-600;
+        box-shadow: 0 0 6.25px #16a34a, inset 0 0 3.75px #16a34a;
+    }
+}

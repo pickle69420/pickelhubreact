@@ -1,67 +1,51 @@
+import { Home2,Book,SearchNormal1,Game,Setting5 } from "iconsax-react";
+
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
+	mainv: "1.0.0" ,
+	themes: {
+		light: {
+			
+		},
+		darkgreen: {
+
+		},
+		darkblue: {
+
+		},
+		darkpurple: {
+
+		},
+	},
 	navItems: [
 		{
-			label: "Home",
-			href: "/",
+			id: 0,
+			display:"Home",
+			icon: Home2,
+			import: "home.js",
 		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
+		{
+			id: 1,
+			display:"News",
+			icon: Book,
+			import: "news.js",
+		},
+		{
+			id: 2,
+			display:"Web",
+			icon: SearchNormal1,
+			import: "browser.js",
+		},
+		{
+			id: 3,
+			display:"Games",
+			icon: Game,
+			import: "games.js",
+		},
+		{
+			id: 4,
+			display:"Settings",
+			icon: Setting5,
+			import: "settings.js",
+		}
 	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
-		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
-	],
-	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
-	},
 };

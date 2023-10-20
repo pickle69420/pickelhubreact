@@ -1,4 +1,4 @@
-import version from "@/data/version.json";
+import { siteConfig as version } from "@/config/site";
 
 if ("serviceWorker" in navigator) {
   const lastVersion = localStorage.getItem("version");
